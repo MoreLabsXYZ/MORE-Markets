@@ -5,6 +5,7 @@ import {IPool} from '../../../interfaces/IPool.sol';
 import {IInitializableAToken} from '../../../interfaces/IInitializableAToken.sol';
 import {IInitializableDebtToken} from '../../../interfaces/IInitializableDebtToken.sol';
 import {InitializableImmutableAdminUpgradeabilityProxy} from '../aave-upgradeability/InitializableImmutableAdminUpgradeabilityProxy.sol';
+import {Errors} from '../helpers/Errors.sol';
 import {ReserveConfiguration} from '../configuration/ReserveConfiguration.sol';
 import {DataTypes} from '../types/DataTypes.sol';
 import {ConfiguratorInputTypes} from '../types/ConfiguratorInputTypes.sol';
