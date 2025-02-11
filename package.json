@@ -1,7 +1,7 @@
 {
-  "name": "@aave/core-v3",
-  "version": "1.19.4",
-  "description": "Aave Protocol V3 core smart contracts",
+  "name": "@more-labs/more-markets",
+  "version": "1.0.1",
+  "description": "More Markets core smart contracts fork of Aave V3",
   "files": [
     "contracts",
     "artifacts",
@@ -61,29 +61,18 @@
     "tslint-plugin-prettier": "2.3.0",
     "typescript": "^4.5.0"
   },
-  "author": "Aave",
-  "contributors": [
-    "Emilio Frangella <emilio@aave.com>",
-    "Miguel Martinez <miguel@aave.com>",
-    "Steven Valeri <steven@aave.com>",
-    "David Racero <david.k@aave.com>",
-    "Lasse Herskind <lasse@aave.com>",
-    "Mark Hinschberger <mark@aave.com>",
-    "Peter Michael <peter.dev@aave.com>",
-    "Pol Sendra <pol@aave.com>"
-  ],
-  "license": "BUSL-1.1",
+  "author": "MORE",
+  "license": "GNU-3.0",
   "keywords": [
-    "aave",
+    "MORE",
     "protocol",
     "protocol-v3",
     "core-v3",
-    "ethereum",
     "solidity"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/aave/aave-v3-core"
+    "url": "git://github.com/MoreLabsXYZ/MORE-Markets"
   },
   "lint-staged": {
     "*.{ts,js,md,sol}": "prettier --write"
