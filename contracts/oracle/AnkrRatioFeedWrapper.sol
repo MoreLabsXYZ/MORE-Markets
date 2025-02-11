@@ -10,9 +10,9 @@ import {AggregatorV2V3Interface} from './interfaces/AggregatorV2V3Interface.sol'
  * This smart contract supposed to behave like a Chainlink's oracle and return the price of ankrFlow/usd
  */
 contract AnkrFlowToUsdFeed is AggregatorV2V3Interface {
-  IInternetBondRatioFeed public ankrRatioFeed;
-  address public ankrFlow;
-  AggregatorV2V3Interface public flowFeed;
+  IInternetBondRatioFeed public immutable ankrRatioFeed;
+  address public immutable ankrFlow;
+  AggregatorV2V3Interface public immutable flowFeed;
 
   constructor(address _ankrRatioFeed, address _ankrFlow, address _flowFeed) {
     ankrRatioFeed = IInternetBondRatioFeed(_ankrRatioFeed);

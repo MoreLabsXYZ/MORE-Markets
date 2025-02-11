@@ -5,6 +5,7 @@ import {IPool} from '../../../interfaces/IPool.sol';
 import {IInitializableAToken} from '../../../interfaces/IInitializableAToken.sol';
 import {IInitializableDebtToken} from '../../../interfaces/IInitializableDebtToken.sol';
 import {InitializableImmutableAdminUpgradeabilityProxy} from '../aave-upgradeability/InitializableImmutableAdminUpgradeabilityProxy.sol';
+import {Errors} from '../helpers/Errors.sol';
 import {ReserveConfiguration} from '../configuration/ReserveConfiguration.sol';
 import {DataTypes} from '../types/DataTypes.sol';
 import {ConfiguratorInputTypes} from '../types/ConfiguratorInputTypes.sol';
@@ -51,6 +52,12 @@ library ConfiguratorLogic {
     IPool pool,
     ConfiguratorInputTypes.InitReserveInput calldata input
   ) public {
+    // audit fix
+    require(
+      input.underlyingAssetDecimals >= ReserveConfiguration.DEBT_CEILING_DECIMALS,
+      Errors.INVALID_RESERVE_PARAMS
+    );
+
     address aTokenProxyAddress = _initTokenWithProxy(
       input.aTokenImpl,
       abi.encodeWithSelector(
