@@ -34,7 +34,7 @@ Formal Verification - November 2021-January 2022
 
 ### Ordered by MORE
 
-V3.0.1 additional audit - December 2024
+V3.0.2 - December 2024
 
 - [PeckShield](./audits/MORE/PeckShield-Audit-Report-MOREMarkets-v1.0.pdf)
 
