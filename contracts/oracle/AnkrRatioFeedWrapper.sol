@@ -21,7 +21,7 @@ contract AnkrFlowToUsdFeed is AggregatorV2V3Interface {
   }
 
   function decimals() public view virtual returns (uint8) {
-    return uint8(8);
+    return flowFeed.decimals();
   }
 
   function description() public pure returns (string memory) {
@@ -97,6 +97,6 @@ contract AnkrFlowToUsdFeed is AggregatorV2V3Interface {
     // Decimal of flowPriceInUsd is 8, that means that we need to convert it to 18 decimal
     // by multiplying by 10**(18 - 8) and then multiply by 10**8 to safe precision and keep
     // decimal of usd.
-    return (flowPriceInUsd * 10 ** 10 * 10 ** 8) / flowAnkrFlowPrice;
+    return ((flowPriceInUsd * 10 ** 18) / flowAnkrFlowPrice);
   }
 }
